@@ -1,4 +1,7 @@
 # sample-django-app-project [![Build Status](https://travis-ci.org/prince-tanapong/sample-django-app-project.svg?branch=master)](https://travis-ci.org/prince-tanapong/sample-django-app-project)
+## CI
+  1. Travis CI(Should use this on open source project)
+  2. Circle CI(Should use this on small private project, build time less than 1500 mins per month)
 
 ## Docker
 1. How to install docker
@@ -24,3 +27,4 @@
   - run test coverage `coverage run manage.py test`
   - see report `coverage report`
   - Ps you can run on your host sever for example `docker-compose exec web coverage run manage.py test`
+
