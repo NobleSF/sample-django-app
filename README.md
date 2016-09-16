@@ -1,4 +1,4 @@
-# sample-django-app-project [![Build Status](https://travis-ci.org/prince-tanapong/sample-django-app-project.svg?branch=master)](https://travis-ci.org/prince-tanapong/sample-django-app-project)
+# sample-django-app [![Build Status](https://travis-ci.org/prince-tanapong/sample-django-app-project.svg?branch=master)](https://travis-ci.org/prince-tanapong/sample-django-app-project)
 ## CI
   1. Travis CI(Should use this on open source project)
   2. Circle CI(Should use this on small private project, build time less than 1500 mins per month)
