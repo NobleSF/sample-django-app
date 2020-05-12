@@ -9,6 +9,11 @@ DEFAULT_FILE_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
 AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID', "")
 AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY', "")
 AWS_S3_BUCKET_NAME = os.environ.get('AWS_S3_BUCKET_NAME', "")
+AWS_OPTIONS = {
+    'AWS_ACCESS_KEY_ID': AWS_ACCESS_KEY_ID,
+    'AWS_SECRET_ACCESS_KEY': AWS_SECRET_ACCESS_KEY,
+    'AWS_STORAGE_BUCKET_NAME': AWS_S3_BUCKET_NAME,
+}
 AWS_SNS_NAME = os.environ.get('AWS_SNS_NAME', "")
 AWS_STATIC_URL = 'https://' + AWS_S3_BUCKET_NAME + '.s3.amazonaws.com/'
 
@@ -44,7 +49,7 @@ SERVER_EMAIL = "info@example.com"  # ditto (default from-email for Django errors
 # AWS RDS database
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'ENGINE': 'django.db.backends.postgresql',
         'NAME': os.environ.get('AWS_RDS_DB_NAME', ''),
         'USER': os.environ.get('AWS_RDS_USERNAME', ''),
         'PASSWORD': os.environ.get('AWS_RDS_PASSWORD', ''),

@@ -30,15 +30,17 @@ ALLOWED_HOSTS = [
     '127.0.0.1',
 ]
 
-# CORS_ORIGIN_ALLOW_ALL = True
-# CORS_ORIGIN_WHITELIST = (
-#     'herokuapp.com',
-#     'amazonaws.com',
-#     'localhost',
-#     '127.0.0.1',
-#     'mycompany.com',
-#     'vendor_api.com',
-# )
+if LOCAL:
+    CORS_ORIGIN_ALLOW_ALL = True
+else:
+    CORS_ORIGIN_WHITELIST = (
+        'herokuapp.com',
+        'amazonaws.com',
+        'localhost',
+        '127.0.0.1',
+        # 'mycompany.com',
+        # 'vendor_api.com',
+    )
 
 if PRODUCTION:
     HOSTNAME = "app.mycompany.com"
