@@ -1,7 +1,7 @@
 import json
 import uuid
-from jsonfield import JSONField
 
+from django.contrib.postgres.fields import JSONField
 from django.db import models
 
 

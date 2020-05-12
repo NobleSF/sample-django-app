@@ -19,3 +19,11 @@ class Publishable(models.Model):
             return True
         else:
             return False
+
+    @is_published.setter
+    def is_published(self, value):
+        if value and not self.is_published:
+            self.unpublished_at = None
+            self.published_at = timezone.now()
+        elif not value and self.is_published:
+            self.unpublished_at = timezone.now()
