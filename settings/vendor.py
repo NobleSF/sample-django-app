@@ -3,12 +3,12 @@ import os
 from settings import LOCAL, STAGE, DEMO, PRODUCTION
 
 # STATIC FILES
-STATICFILES_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
-DEFAULT_FILE_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
+STATICFILES_STORAGE = 'storages.backends.s3boto3.S3BotoStorage'
+DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3BotoStorage'
 
 AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID', "")
 AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY', "")
-AWS_S3_BUCKET_NAME = os.environ.get('AWS_S3_BUCKET_NAME', "")
+AWS_STORAGE_BUCKET_NAME = AWS_S3_BUCKET_NAME = os.environ.get('AWS_S3_BUCKET_NAME', "")
 AWS_OPTIONS = {
     'AWS_ACCESS_KEY_ID': AWS_ACCESS_KEY_ID,
     'AWS_SECRET_ACCESS_KEY': AWS_SECRET_ACCESS_KEY,
