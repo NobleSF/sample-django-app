@@ -14,6 +14,7 @@ AWS_OPTIONS = {
     'AWS_SECRET_ACCESS_KEY': AWS_SECRET_ACCESS_KEY,
     'AWS_STORAGE_BUCKET_NAME': AWS_S3_BUCKET_NAME,
 }
+AWS_DEFAULT_ACL = 'public-read'
 AWS_SNS_NAME = os.environ.get('AWS_SNS_NAME', "")
 AWS_STATIC_URL = 'https://' + AWS_S3_BUCKET_NAME + '.s3.amazonaws.com/'
 

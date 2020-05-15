@@ -11,7 +11,7 @@ class Email(Timestampable, models.Model):
     to_address = models.CharField(max_length=140)
     from_address = models.CharField(
         max_length=140,
-        default="NSP <bookings@naturalselectionpromotions.com>"
+        default="Info <bookings@example.com>"
     )
     subject = models.TextField(max_length=140)
     body = models.TextField(default="")

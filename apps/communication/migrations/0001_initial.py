@@ -35,7 +35,7 @@ class Migration(migrations.Migration):
                 ('created_at', models.DateTimeField(auto_now_add=True)),
                 ('modified_at', models.DateTimeField(auto_now=True)),
                 ('to_address', models.CharField(max_length=140)),
-                ('from_address', models.CharField(default='NSP <bookings@naturalselectionpromotions.com>', max_length=140)),
+                ('from_address', models.CharField(default='Info <bookings@example.com>', max_length=140)),
                 ('subject', models.TextField(max_length=140)),
                 ('body', models.TextField(default='')),
                 ('type', models.SmallIntegerField(blank=True, choices=[(0, 'notification'), (1, 'confirmation'), (2, 'password')], default=0, null=True)),
