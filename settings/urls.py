@@ -11,6 +11,7 @@ urlpatterns = [
 
     # route prefix for urlpatterns in apps/dashboard/urls.py
     # url(r'^dashboard/', include('apps.dashboard.urls', namespace='dashboard')),
+    # if using namespace, include app_name = "dashboard" in urls.py
 
 ]
 

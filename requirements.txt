@@ -21,7 +21,8 @@ django-widget-tweaks==1.4.8
 djangorestframework==3.11.0
 djangorestframework-simplejwt==4.4.0
 ipython==7.14.0
-# psycopg2-binary
+psycopg2 # for production
+# psycopg2-binary # for local dev
 pytz==2020.1
 PyYAML==5.3.1
 redis==3.5.1
