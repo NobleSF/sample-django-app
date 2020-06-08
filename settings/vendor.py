@@ -32,6 +32,14 @@ CACHES = {
 }
 
 
+# HEROKU DATABASE
+import dj_database_url
+DATABASES = {'default': dj_database_url.config(), }
+# Set DATABASE_URL in config if using other host
+# DATABASE_URL = f"postgresql://{username}:{password}@{host}:5432/{dbname}"
+
+
+
 # SENDINBLUE.COM EMAIL SERVICE
 # ANYMAIL = {
 #     # (exact settings here depend on your ESP...)
@@ -41,25 +49,6 @@ CACHES = {
 DEFAULT_FROM_EMAIL = "info@example.com"  # if you don't already have this in settings
 SERVER_EMAIL = "info@example.com"  # ditto (default from-email for Django errors)
 
-
-# HEROKU DATABASE
-# import dj_database_url
-#
-# if PRODUCTION or STAGE:
-#     DATABASES = {'default': dj_database_url.config()}
-#     SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
-
-# AWS RDS database
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': os.environ.get('AWS_RDS_DB_NAME', ''),
-        'USER': os.environ.get('AWS_RDS_USERNAME', ''),
-        'PASSWORD': os.environ.get('AWS_RDS_PASSWORD', ''),
-        'HOST': os.environ.get('AWS_RDS_HOSTNAME', ''),
-        'PORT': os.environ.get('AWS_RDS_PORT', ''),
-    }
-}
 
 # ANALYTICS STAGE
 # MIXPANEL_API_TOKEN = os.environ.get('MIXPANEL_API_TOKEN')

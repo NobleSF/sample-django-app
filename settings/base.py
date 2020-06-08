@@ -72,6 +72,7 @@ DJANGO_APPS = [
 THIRD_PARTY_APPS = [
     'corsheaders',
     'storages',
+    'django_extensions',
     'request',
     # 'analytical',
     # 'timezone_field',
