@@ -73,6 +73,7 @@ THIRD_PARTY_APPS = [
     'corsheaders',
     'storages',
     'django_extensions',
+    'djmoney',
     'request',
     # 'analytical',
     # 'timezone_field',
