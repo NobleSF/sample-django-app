@@ -1,6 +1,7 @@
 # Sample Django App
 
 A skeleton for new projects prepared to become large applications
+Ready to deploy on Heroku
 
 ## Features
 
