@@ -1,7 +1,44 @@
-# sample-django-app [![Build Status](https://travis-ci.org/prince-tanapong/sample-django-app-project.svg?branch=master)](https://travis-ci.org/prince-tanapong/sample-django-app-project)
-## CI
-  1. Travis CI(Should use this on open source project)
-  2. Circle CI(Should use this on small private project, build time are less than 1500 mins per month)
+# Sample Django App
+
+A skeleton for new projects prepared to become large applications
+
+## Features
+
+- [x] Common models for document and image uploads, user addresses, and notes
+- [x] Use [django-simple-history](https://github.com/jazzband/django-simple-history) to keep record of historical model state on every create/update/delete
+
+- [x] Model Behaviors, Inspired by Kevin Stone's [Django Model Behaviors](http://blog.kevinastone.com/django-model-behaviors.html).
+  - [x] Authorable: add assign user as author/creator and toggle public anonymity
+  - [x] Annotatable: add authored notes to any model
+  - [x] Expirable: set validitidy and expiration dates
+  - [x] Permalinkable: set url slug and define url pattern (great for blog posts or user profiles)
+  - [x] Publishable: set dates for publishing and editing
+  - [x] Timestampable: created_at and modified_at dates - great to add on all models (Rails has this on all models by default)
+  - [x] Uploadable: connect a model dircetly to all your file uploading features (great for documents
+
+- [x] Communication App Models
+  - [x] Email
+  - [x] SMS
+  - [x] Slack, Telegram
+
+- [x] Enhanced Default User Model
+  - [x] email verification
+  - [x] can use phone number instead of email for login, password reset
+  - [x] check has agreed to latest legal T&C
+  - [x] [OTP code](https://gist.github.com/tomcounsell/78d0a587b6107369792f1e05471e50cc)
+  - [x] Facebook login tokens
+
+- [x] Common Utilities
+  - [x] AWS S3 and SQS connection methods
+  - [x] multithreading - see [related SO answer](https://stackoverflow.com/a/28913218)
+  - [x] WritableSerializerMethodField for Django Rest Framework
+  - [x] WhoIs domain lookups
+  - [x] Transloadit integration methods
+  - [x] Auth tokens for JWT
+  - [x] Wordwide language codes for your L11N
+  - [x] [Iommi](https://github.com/TriOptima/iommi) classes
+  
+
 
 ## Docker
 1. How to install docker
