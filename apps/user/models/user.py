@@ -44,13 +44,13 @@ class User(AbstractUser, Timestampable, Locatable):
         return str(int(hash_object.hexdigest(), 16))[-4:]
 
     @property
-    def is_agreed_to_terms(self):
+    def is_agreed_to_terms(self) -> bool:
         if self.agreed_to_terms_at and self.agreed_to_terms_at > timezone.make_aware(datetime(2019, 11, 1)):
             return True
         return False
 
     @is_agreed_to_terms.setter
-    def is_agreed_to_terms(self, value):
+    def is_agreed_to_terms(self, value: bool):
         if value is True:
             self.agreed_to_terms_at = timezone.now()
         elif value is False and self.is_agreed_to_terms:
