@@ -34,4 +34,4 @@ schedule==0.6.0
 simplejson
 six
 toolz
-waitress==1.4.3
+waitress==2.1.1
